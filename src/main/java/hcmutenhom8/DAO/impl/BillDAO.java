@@ -1,11 +1,11 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.DBConnectionSQL;
-import hcmute.team5.DAO.IBillDAO;
-import hcmute.team5.mapper.BillDetailsMapper;
-import hcmute.team5.mapper.BillMapper;
-import hcmute.team5.model.BillDetailsModel;
-import hcmute.team5.model.BillModel;
+import hcmutenhom8.DAO.DBConnectionSQL;
+import hcmutenhom8.DAO.IBillDAO;
+import hcmutenhom8.mapper.BillDetailsMapper;
+import hcmutenhom8.mapper.BillMapper;
+import hcmutenhom8.model.BillDetailsModel;
+import hcmutenhom8.model.BillModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

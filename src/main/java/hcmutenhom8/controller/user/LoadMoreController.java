@@ -1,8 +1,8 @@
 package hcmutenhom8.controller.user;
 
-import hcmute.team5.model.ProductModel;
-import hcmute.team5.service.IProductDetailService;
-import hcmute.team5.service.impl.ProductDetailService;
+import hcmutenhom8.model.ProductModel;
+import hcmutenhom8.service.IProductDetailService;
+import hcmutenhom8.service.impl.ProductDetailService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

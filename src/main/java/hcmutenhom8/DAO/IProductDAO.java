@@ -1,6 +1,6 @@
 package hcmutenhom8.DAO;
 
-import hcmute.team5.model.*;
+import hcmutenhom8.model.*;
 
 import java.util.List;
 

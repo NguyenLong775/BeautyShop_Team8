@@ -1,6 +1,6 @@
 package hcmutenhom8.DAO;
 
-import hcmute.team5.mapper.RowMapper;
+import hcmutenhom8.mapper.RowMapper;
 
 import java.util.List;
 

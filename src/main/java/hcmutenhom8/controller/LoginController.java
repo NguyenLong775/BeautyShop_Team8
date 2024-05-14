@@ -1,4 +1,175 @@
 package hcmutenhom8.controller;
 
-public class LoginController {
+import hcmutenhom8.model.AccountModel;
+import hcmutenhom8.model.CustomerModel;
+import hcmutenhom8.service.IAccountService;
+import hcmutenhom8.service.impl.AccountService;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import java.io.IOException;
+import java.io.Serial;
+
+@WebServlet(urlPatterns = {"/login", "/register", "/waiting", "/logout"})
+public class LoginController extends HttpServlet {
+    @Serial
+    private static final long serialVersionUID = 1L;
+    IAccountService service = new AccountService();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getRequestURI();
+        if (path.contains("/login")) {
+            getLogin(req, resp);
+        } else if (path.contains("/register")) {
+            req.getRequestDispatcher("/views/user/register.jsp").forward(req, resp);
+        } else if (path.contains("/waiting")) {
+            getWaiting(req, resp);
+        } else if (path.contains("/logout")) {
+            getLogout(req, resp);
+        }
+    }
+
+    private void getLogout(HttpServletRequest req, HttpServletResponse resp) {
+        req.getSession().removeAttribute("account");
+
+        // remove cookie
+        Cookie[] cookies = req.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("username".equals(cookie.getName())) {
+                    cookie.setMaxAge(0);
+                    resp.addCookie(cookie);
+                }
+            }
+        }
+        try {
+            resp.sendRedirect(req.getContextPath() + "/waiting");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void getWaiting(HttpServletRequest req, HttpServletResponse resp) {
+        // do authorization and redirect
+        AccountModel account = (AccountModel) req.getSession(false).getAttribute("account");
+        if (account != null) {
+            if (account.getRoleId() == 1) {
+                try {
+                    resp.sendRedirect(req.getContextPath() + "/admin-home");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                try {
+                    resp.sendRedirect(req.getContextPath() + "/user-home");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            try {
+                resp.sendRedirect(req.getContextPath() + "/trang-chu");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void getLogin(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        if (req.getSession().getAttribute("account") != null) {
+            resp.sendRedirect(req.getContextPath() + "/waiting");
+            return;
+        }
+        // check cookie
+        Cookie[] cookies = req.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if ("username".equals(cookie.getName())) {
+                    HttpSession session = req.getSession(true);
+                    session.setAttribute("username", cookie.getValue());
+                    resp.sendRedirect(req.getContextPath() + "/waiting");
+                    return;
+                }
+            }
+        }
+        resp.sendRedirect(req.getContextPath() + "/trang-chu");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getRequestURI();
+        System.out.println(path);
+        if (path.contains("/login")) {
+            postLogin(req, resp);
+        } else if (path.contains("/register")) {
+            postRegister(req, resp);
+        }
+    }
+
+    private void postRegister(HttpServletRequest req, HttpServletResponse resp) {
+        String username = req.getParameter("username");
+        if (service.findOneByUsername(username) == null) {
+            String password = req.getParameter("password");
+            String fullname = req.getParameter("fullname");
+            String sdt = req.getParameter("sdt");
+            AccountModel account = new AccountModel();
+            account.setUserName(username);
+            account.setFullName(fullname);
+            account.setPassWord(password);
+            account.setRoleId(2);
+            account.setStatus("Active");
+            account.setSdt(sdt);
+            service.insert(account);
+            CustomerModel customer = new CustomerModel();
+            customer.setUsername(username);
+            customer.setSdt(sdt);
+            service.insertCus(customer);
+            req.setAttribute("note", "Đăng kí thành công");
+            try {
+                req.getRequestDispatcher("/views/web/home.jsp").forward(req, resp);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            req.setAttribute("note", "Tên tài khoản đã tồn tại!!");
+            try {
+                req.getRequestDispatcher("/views/web/home.jsp").forward(req, resp);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    private void postLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        String remember = req.getParameter("remember");
+        AccountModel account = service.login(username, password);
+        if (account != null) {
+            // if remember is checked, set cookie
+            if (remember != null) {
+                Cookie cookie = new Cookie("username", username);
+                cookie.setMaxAge(60 * 30);
+                resp.addCookie(cookie);
+            }
+
+            req.getSession().setAttribute("account", account);
+            try {
+                resp.sendRedirect(req.getContextPath() + "/waiting");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            req.setAttribute("note", "Sai tên tài khoản hoặc mật khẩu");
+            try {
+                req.getRequestDispatcher("/views/web/home.jsp").forward(req, resp);
+            } catch (ServletException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

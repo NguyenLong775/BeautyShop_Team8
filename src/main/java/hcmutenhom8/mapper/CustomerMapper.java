@@ -1,6 +1,6 @@
 package hcmutenhom8.mapper;
 
-import hcmute.team5.model.CustomerModel;
+import hcmutenhom8.model.CustomerModel;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,9 +1,9 @@
 package hcmutenhom8.controller.admin;
 
-import hcmute.team5.model.AccountModel;
-import hcmute.team5.model.ProductModel;
-import hcmute.team5.service.IProductService;
-import hcmute.team5.service.impl.ProductService;
+import hcmutenhom8.model.AccountModel;
+import hcmutenhom8.model.ProductModel;
+import hcmutenhom8.service.IProductService;
+import hcmutenhom8.service.impl.ProductService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

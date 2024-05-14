@@ -1,9 +1,9 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.DBConnectionSQL;
-import hcmute.team5.DAO.IVoucherDAO;
-import hcmute.team5.mapper.VoucherMapper;
-import hcmute.team5.model.VoucherModel;
+import hcmutenhom8.DAO.DBConnectionSQL;
+import hcmutenhom8.DAO.IVoucherDAO;
+import hcmutenhom8.mapper.VoucherMapper;
+import hcmutenhom8.model.VoucherModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

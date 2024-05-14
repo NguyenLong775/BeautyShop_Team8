@@ -1,8 +1,8 @@
 package hcmutenhom8.controller.user;
 
-import hcmute.team5.model.*;
-import hcmute.team5.service.*;
-import hcmute.team5.service.impl.*;
+import hcmutenhom8.model.*;
+import hcmutenhom8.service.*;
+import hcmutenhom8.service.impl.*;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

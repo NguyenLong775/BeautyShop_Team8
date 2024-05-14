@@ -1,10 +1,10 @@
 package hcmutenhom8.controller.admin;
 
-import hcmute.team5.model.RevenueModel;
-import hcmute.team5.service.IBillService;
-import hcmute.team5.service.IRevenueService;
-import hcmute.team5.service.impl.BillService;
-import hcmute.team5.service.impl.RevenueService;
+import hcmutenhom8.model.RevenueModel;
+import hcmutenhom8.service.IBillService;
+import hcmutenhom8.service.IRevenueService;
+import hcmutenhom8.service.impl.BillService;
+import hcmutenhom8.service.impl.RevenueService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -1,6 +1,6 @@
 package hcmutenhom8.DAO;
 
-import hcmute.team5.model.RevenueModel;
+import hcmutenhom8.model.RevenueModel;
 
 import java.util.List;
 

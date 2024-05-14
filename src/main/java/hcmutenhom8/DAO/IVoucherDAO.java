@@ -1,6 +1,6 @@
 package hcmutenhom8.DAO;
 
-import hcmute.team5.model.VoucherModel;
+import hcmutenhom8.model.VoucherModel;
 
 import java.util.List;
 

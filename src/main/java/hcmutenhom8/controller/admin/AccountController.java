@@ -1,9 +1,9 @@
 package hcmutenhom8.controller.admin;
 
-import hcmute.team5.model.AccountModel;
-import hcmute.team5.model.CustomerModel;
-import hcmute.team5.service.IAccountService;
-import hcmute.team5.service.impl.AccountService;
+import hcmutenhom8.model.AccountModel;
+import hcmutenhom8.model.CustomerModel;
+import hcmutenhom8.service.IAccountService;
+import hcmutenhom8.service.impl.AccountService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

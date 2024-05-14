@@ -1,8 +1,8 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.IRevenueDAO;
-import hcmute.team5.mapper.RevenueMapper;
-import hcmute.team5.model.RevenueModel;
+import hcmutenhom8.DAO.IRevenueDAO;
+import hcmutenhom8.mapper.RevenueMapper;
+import hcmutenhom8.model.RevenueModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

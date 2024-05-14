@@ -1,10 +1,10 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.DBConnectionSQL;
-import hcmute.team5.DAO.IAccountDAO;
-import hcmute.team5.mapper.AccountMapper;
-import hcmute.team5.model.AccountModel;
-import hcmute.team5.model.CustomerModel;
+import hcmutenhom8.DAO.DBConnectionSQL;
+import hcmutenhom8.DAO.IAccountDAO;
+import hcmutenhom8.mapper.AccountMapper;
+import hcmutenhom8.model.AccountModel;
+import hcmutenhom8.model.CustomerModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,6 +1,6 @@
 package hcmutenhom8.controller.admin;
 
-import hcmute.team5.model.AccountModel;
+import hcmutenhom8.model.AccountModel;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

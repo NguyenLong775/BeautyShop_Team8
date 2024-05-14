@@ -1,11 +1,11 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.DBConnectionSQL;
-import hcmute.team5.DAO.IProductDAO;
-import hcmute.team5.mapper.ProductMapper;
-import hcmute.team5.model.ProductModel;
-import hcmute.team5.model.ProductTypeModel;
-import hcmute.team5.model.SupplierModel;
+import hcmutenhom8.DAO.DBConnectionSQL;
+import hcmutenhom8.DAO.IProductDAO;
+import hcmutenhom8.mapper.ProductMapper;
+import hcmutenhom8.model.ProductModel;
+import hcmutenhom8.model.ProductTypeModel;
+import hcmutenhom8.model.SupplierModel;
 
 import java.sql.*;
 import java.util.ArrayList;

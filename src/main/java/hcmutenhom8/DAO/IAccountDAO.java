@@ -1,7 +1,7 @@
 package hcmutenhom8.DAO;
 
-import hcmute.team5.model.AccountModel;
-import hcmute.team5.model.CustomerModel;
+import hcmutenhom8.model.AccountModel;
+import hcmutenhom8.model.CustomerModel;
 
 import java.util.List;
 

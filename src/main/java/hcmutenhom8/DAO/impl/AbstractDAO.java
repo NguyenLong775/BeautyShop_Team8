@@ -1,8 +1,8 @@
 package hcmutenhom8.DAO.impl;
 
-import hcmute.team5.DAO.DBConnectionSQL;
-import hcmute.team5.DAO.GenericDAO;
-import hcmute.team5.mapper.RowMapper;
+import hcmutenhom8.DAO.DBConnectionSQL;
+import hcmutenhom8.DAO.GenericDAO;
+import hcmutenhom8.mapper.RowMapper;
 
 import java.sql.*;
 import java.util.ArrayList;
