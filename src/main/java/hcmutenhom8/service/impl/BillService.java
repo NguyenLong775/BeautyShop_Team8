@@ -1,10 +1,10 @@
 package hcmutenhom8.service.impl;
 
-import hcmute.team5.DAO.IBillDAO;
-import hcmute.team5.DAO.impl.BillDAO;
-import hcmute.team5.model.BillDetailsModel;
-import hcmute.team5.model.BillModel;
-import hcmute.team5.service.IBillService;
+import hcmutenhom8.DAO.IBillDAO;
+import hcmutenhom8.DAO.impl.BillDAO;
+import hcmutenhom8.model.BillDetailsModel;
+import hcmutenhom8.model.BillModel;
+import hcmutenhom8.service.IBillService;
 
 import java.util.List;
 

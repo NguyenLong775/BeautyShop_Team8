@@ -1,8 +1,8 @@
 package hcmutenhom8.service;
 
-import hcmute.team5.model.ProductModel;
-import hcmute.team5.model.ProductTypeModel;
-import hcmute.team5.model.SupplierModel;
+import hcmutenhom8.model.ProductModel;
+import hcmutenhom8.model.ProductTypeModel;
+import hcmutenhom8.model.SupplierModel;
 
 import java.util.List;
 

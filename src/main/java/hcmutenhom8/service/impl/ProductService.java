@@ -1,9 +1,9 @@
 package hcmutenhom8.service.impl;
 
-import hcmute.team5.DAO.IProductDAO;
-import hcmute.team5.DAO.impl.ProductDAO;
-import hcmute.team5.model.ProductModel;
-import hcmute.team5.service.IProductService;
+import hcmutenhom8.DAO.IProductDAO;
+import hcmutenhom8.DAO.impl.ProductDAO;
+import hcmutenhom8.model.ProductModel;
+import hcmutenhom8.service.IProductService;
 
 import java.util.List;
 

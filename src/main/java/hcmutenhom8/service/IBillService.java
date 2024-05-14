@@ -1,7 +1,7 @@
 package hcmutenhom8.service;
 
-import hcmute.team5.model.BillDetailsModel;
-import hcmute.team5.model.BillModel;
+import hcmutenhom8.model.BillDetailsModel;
+import hcmutenhom8.model.BillModel;
 
 import java.util.List;
 

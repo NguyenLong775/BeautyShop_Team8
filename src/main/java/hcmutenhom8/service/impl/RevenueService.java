@@ -1,9 +1,9 @@
 package hcmutenhom8.service.impl;
 
-import hcmute.team5.DAO.IRevenueDAO;
-import hcmute.team5.DAO.impl.RevenueDAO;
-import hcmute.team5.model.RevenueModel;
-import hcmute.team5.service.IRevenueService;
+import hcmutenhom8.DAO.IRevenueDAO;
+import hcmutenhom8.DAO.impl.RevenueDAO;
+import hcmutenhom8.model.RevenueModel;
+import hcmutenhom8.service.IRevenueService;
 
 import java.util.List;
 
