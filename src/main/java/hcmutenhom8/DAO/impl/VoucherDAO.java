@@ -5,10 +5,7 @@ import hcmutenhom8.DAO.IVoucherDAO;
 import hcmutenhom8.mapper.VoucherMapper;
 import hcmutenhom8.model.VoucherModel;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.List;
 
 public class VoucherDAO extends AbstractDAO<VoucherModel> implements IVoucherDAO {

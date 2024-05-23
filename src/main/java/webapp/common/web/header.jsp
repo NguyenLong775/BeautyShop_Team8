@@ -7,7 +7,7 @@
             <div class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-items header__navbar-items--has-qr header__navbar-items--separate">
-                        Vào cửa hàng trên ứng dụng ViVu Shop
+                        Vào cửa hàng trên ứng dụng Original Shop
                         <div style="z-index: 99" class="header__QR">
                             <img src="<c:url value='/template/web/img/QR.png'/>" alt="qr_code" class="header__QR-img">
                             <div class="header__QR-apps">
@@ -27,10 +27,10 @@
                                 <span class="header__navbar-title--no-poiter">
                                     Kết nối
                                 </span>
-                        <a href="https://www.facebook.com/maivy.140103/" class="header__navbar-icon-link">
+                        <a href="https://www.facebook.com/profile.php?id=100008555897025" class="header__navbar-icon-link">
                             <i class="header__navbar-icon fa-brands fa-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/vivu.14__/" class="header__navbar-icon-link">
+                        <a href="https://www.instagram.com/nguynloggg_77/" class="header__navbar-icon-link">
                             <i class="header__navbar-icon fa-brands fa-instagram"></i>
                         </a>
                     </li>
@@ -52,7 +52,7 @@
                                         <img src="<c:url value='/template/web/img/myPham.webp'/>" alt=""
                                              class="header__notify-img">
                                         <div class="header__notify-info">
-                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-name">Mỹ phẩm Ori chính hãng</span>
                                             <span class="header__notify-description">Mô tả mỹ phẩm</span>
                                         </div>
                                     </a>
@@ -63,7 +63,7 @@
                                         <img src="<c:url value='/template/web/img/myPham.webp'/>" alt=""
                                              class="header__notify-img">
                                         <div class="header__notify-info">
-                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-name">Mỹ phẩm Ori chính hãng</span>
                                             <span class="header__notify-description">Mô tả mỹ phẩm</span>
                                         </div>
                                     </a>
@@ -74,7 +74,7 @@
                                         <img src="<c:url value='/template/web/img/myPham.webp'/>" alt=""
                                              class="header__notify-img">
                                         <div class="header__notify-info">
-                                            <span class="header__notify-name">Mỹ phẩm Ohui chính hãng</span>
+                                            <span class="header__notify-name">Mỹ phẩm Ori chính hãng</span>
                                             <span class="header__notify-description">Mô tả mỹ phẩm</span>
                                         </div>
                                     </a>
@@ -102,7 +102,7 @@
             <div class="header-with-search">
                 <div class="header__logo">
                     <a href="<c:url value="/trang-chu"/>" style="display: block;width: 75%;"><img
-                            src="<c:url value='/template/web/img/iconShop.png'/>" alt="" class="header__logo-img"></a>
+                            src="<c:url value='/template/web/img/OriShop.png'/>" alt="" class="header__logo-img"></a>
                 </div>
 
                 <div class="header__search">
